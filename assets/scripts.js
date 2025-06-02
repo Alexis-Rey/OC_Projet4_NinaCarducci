@@ -12,6 +12,7 @@ $(document).ready(function() {
         },
         // Autres options tel que lightBox pour afficher les images séléctionné en superposition agrandie, désignation de la lightbox avec un id pour la différencier 
         // des autres instances lightbox, affichage ou non des tags (ici oui) et positionnement de ces derniers par rapport à la galerie ( ici en haut)
+        // Redondance ici du paramètre d'options lightBox vu qu'il est déja définir sur true par défault avant la merge >> aucune incidence sur le code.
         lightBox: true,
         lightboxId: 'myAwesomeLightbox',
         showTags: true,
