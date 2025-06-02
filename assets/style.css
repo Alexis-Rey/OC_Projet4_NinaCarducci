@@ -105,6 +105,15 @@ body {
 	background-color: #BEB45A;
 	border-radius:0 ;
 }
+
+/* Rajout d'une règle sur le sélécteur de classe active-tag qui désigne tout simplement le tag actif pour permettre de colorer ce dernier en or comme demandé par Nina
+et comme s'était prévu en initiale */
+.nav-pills .nav-link.active-tag{
+	background-color: #BEB45A;
+	color: white;
+	border-radius: 0.25rem;
+}
+
 .nav-pills .nav-link {
 	color: #000
 }

@@ -128,7 +128,7 @@
         if (columns.xl) {
           columnClasses += ` col-xl-${Math.ceil(12 / columns.xl)}`;
         }
-        element.wrap(`<div class='item-column mb-4${columnClasses}'></div>`);
+        element.wrap(`<div class='item-column mb-4${columnClasses}' style="cursor:pointer;"></div>`);
       } else {
         console.error(
           `Columns should be defined as numbers or objects. ${typeof columns} is not supported.`
@@ -280,15 +280,22 @@
                 </div>
             </div>`);
     },
+
+    /* méthode qui permet de gérer les étiquette de filtrage de la galerie photo, en rappel, elle prends en paramètre la gallery, l'endroit ou l'on souhaite placer les 
+    étiquettes et le tableau des tags définit sous tagsCollection */
     showItemTags(gallery, position, tags) {
+      // on initialise une variable tagItems qui viens prendre un élément de liste <li> configuré en class et en data pour devenir le bouton TOUS
       var tagItems =
-        '<li class="nav-item"><span class="nav-link active active-tag"  data-images-toggle="all">Tous</span></li>';
+        '<li class="nav-item" style="cursor:pointer;"><span class="nav-link active active-tag"  data-images-toggle="all">Tous</span></li>';
+        // ensuite on lui rajout l'ensemble des étiquettes qui serviront à representer les différentes catégories de filtrages
       $.each(tags, function(index, value) {
-        tagItems += `<li class="nav-item active">
+        tagItems += `<li class="nav-item active" style="cursor:pointer;">
                 <span class="nav-link"  data-images-toggle="${value}">${value}</span></li>`;
       });
+      // ici on créer la variable tagsRow qui sera une liste désordonné auquels on viens affécté les élements du DOM <li> précèdamment créer
       var tagsRow = `<ul class="my-4 tags-bar nav nav-pills">${tagItems}</ul>`;
 
+      // Si la position désigner dans les options est "en-bas" on place la liste sous la galerie photo sinon si elle est "en-haut" on la place au-dessus. On gère également l'erreur dans une position non gérée
       if (position === "bottom") {
         gallery.append(tagsRow);
       } else if (position === "top") {
@@ -297,23 +304,32 @@
         console.error(`Unknown tags position: ${position}`);
       }
     },
+    /*méthode permettant de filtrer la galerie photo de Nina suivant le tag sélectionné, cette fonction est appelé au click sur une étiquette de filtre  */
     filterByTag() {
+      // si l'étiquette séléctionné par l"utilsateur est déjà celle en cours alors ou return , pour cela on véfifie la présence de la classe active-tag
       if ($(this).hasClass("active-tag")) {
         return;
       }
+      // si l'étiquette sélectionné est differente de l'actuel, on supprime les class active et active-tag de l'étiquette avant de lui redonner seulement la class active-tag (évite un doublon)
       $(".active-tag").removeClass("active active-tag");
       $(this).addClass("active-tag");
 
+      // on initialise une variable qui va contenir la valeur data de l'étiquette sélectionné donc le nom de la catégorie (concert, entreprise, mariage, portrait ou tous)
       var tag = $(this).data("images-toggle");
 
+      /* on récupère l'élement DOM des imgs de la galerie photo et on viens dans un premier temps masqué l'ensemble des photographie 
+      équivalent js de document.querySelectorAll(".gallery-item); puis d'une boucle sur l'ensemble des imgs dans laquelle on dit ensuite let parent = document.querySelector(".item-column);
+      et enfin parent.innerHTML="";*/
       $(".gallery-item").each(function() {
         $(this)
           .parents(".item-column")
           .hide();
+          // si le tag séléctionné correspond à tous, on génere dynamiquement la galerie avec une transition de 300ms
         if (tag === "all") {
           $(this)
             .parents(".item-column")
             .show(300);
+            // si le tag séléctionné à pour valeur data-tag , on génere dynamiquement la galerie avec uniquement les photos qui possède le data-tag correpondant avec une transi de 300ms
         } else if ($(this).data("gallery-tag") === tag) {
           $(this)
             .parents(".item-column")
