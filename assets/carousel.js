@@ -4,7 +4,7 @@ const boutonPrev = document.querySelector(".carousel__prev");
 const boutonNext = document.querySelector(".carousel__next");
 
 let currentIndex = 0;
-let interval = setInterval(nextImage,3000);
+let interval = setInterval(nextImage,5000);
 
 function updateCarousel(index){
     for ( let i = 0; i<imagesCarousel.length; i++){
@@ -26,3 +26,29 @@ function nextImage(){
     let nextIndex = (currentIndex + 1) % imagesCarousel.length;
     updateCarousel(nextIndex);
 };
+
+function prevImage(){
+    let prevIndex = (currentIndex - 1 + imagesCarousel.length) % imagesCarousel.length;
+    updateCarousel(prevIndex);
+}
+
+for(let b = 0; b<boutonsMenu.length; b++){
+    boutonsMenu[b].addEventListener("click", () =>{
+        clearInterval(interval);
+        updateCarousel(b);
+        interval = setInterval(nextImage,5000);
+    });
+};
+
+
+boutonNext.addEventListener("click", () => {
+  clearInterval(interval);
+  nextImage();
+  interval = setInterval(nextImage, 3000);
+});
+
+boutonPrev.addEventListener("click", () => {
+  clearInterval(interval);
+  prevImage();
+  interval = setInterval(nextImage, 3000);
+});
