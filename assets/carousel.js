@@ -6,7 +6,7 @@ const boutonNext = document.querySelector(".carousel__next");
 
 let currentIndex = 0;
 let autoModeRight = true;
-let interval = setInterval(nextImage,4000);
+let interval = setInterval(nextImage,5000);
 let arrayCarouselRight = Array.from(imagesCarouselRight);
 
 
@@ -39,24 +39,7 @@ function nextImage(){
     gallery.style.transition = "transform 0.5s ease";
     gallery.style.transform = "translateX(-100%)";
     gallery.addEventListener("transitionend", handleNextEnd, { once: true });
-    interval = setInterval(nextImage, 3000);
-};
-
-for(let b = 0; b<boutonsMenu.length; b++){
-    boutonsMenu[b].addEventListener("click", () =>{
-        currentIndex = b;
-        clearInterval(interval);
-        interval = setInterval(nextImage, 3000);
-
-        // Réorganise les images
-        for (let i = 0; i<arrayCarouselRight.length; i++){
-            arrayCarouselRight[i].style.order = (i - b + arrayCarouselRight.length) % arrayCarouselRight.length;
-        }
-
-        majBoutonColor(b);
-        gallery.style.transition = "none"; // pas d’animation ici pour éviter le saut
-        gallery.style.transform = "translateX(0%)";
-    });
+    interval = setInterval(nextImage, 5000);
 };
 
 boutonNext.addEventListener("click", () => {
@@ -83,7 +66,7 @@ function prevImage(){
     gallery.style.transform = "translateX(0%)";
     gallery.addEventListener("transitionend", handlePrevEnd, { once: true });
 
-    interval = setInterval(nextImage, 3000);
+    interval = setInterval(nextImage, 5000);
 };
 
 function handlePrevEnd() {
@@ -92,3 +75,54 @@ function handlePrevEnd() {
     gallery.style.transform = "translateX(0%)";
 }
 
+function goToImage(step,direction){
+  if(step === 1){
+    if(direction === "right"){
+      setTimeout(nextImage,200);
+    }else{
+      setTimeout(prevImage,200);
+    }
+  }else{
+    if(direction === "right"){
+      setTimeout(prevImage,200);
+    }else{
+      setTimeout(nextImage,200);
+    }
+  }
+};
+
+for(let b= 0; b<boutonsMenu.length; b++){
+  boutonsMenu[b].addEventListener("click", () =>{
+    clearInterval(interval);
+    let step;
+    let direction;
+    let targetIndex = b;
+    majBoutonColor(targetIndex);
+    if (targetIndex === currentIndex) return;
+    if(targetIndex>currentIndex){
+      step = targetIndex - currentIndex;
+      direction = "right";
+    }else{
+      step = currentIndex - targetIndex;
+      direction = "left";
+    };
+    goToImage(step,direction)
+  });
+};
+
+// for(let b = 0; b<boutonsMenu.length; b++){
+//     boutonsMenu[b].addEventListener("click", () =>{
+//         currentIndex = b;
+//         clearInterval(interval);
+//         interval = setInterval(nextImage, 5000);
+
+//         // Réorganise les images
+//         for (let i = 0; i<arrayCarouselRight.length; i++){
+//             arrayCarouselRight[i].style.order = (i - b + arrayCarouselRight.length) % arrayCarouselRight.length;
+//         }
+
+//         majBoutonColor(b);
+//         gallery.style.transition = "none"; // pas d’animation ici pour éviter le saut
+//         gallery.style.transform = "translateX(0%)";
+//     });
+// };
