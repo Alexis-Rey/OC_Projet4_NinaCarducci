@@ -23,10 +23,7 @@ function filtreImages(categoriesBouton){
            return image.dataset.galleryTag === categoriesBouton;
         });
     if(categoriesBouton === "Tous"){
-        container.style.gridTemplateColumns = "1fr 1fr 1fr";
         for( let i=0; i<images.length;i++){
-            images[i].style.width = "30vw";
-            images[i].style.height = "30vw";
             container.appendChild(images[i]);
         };
     }else{
@@ -34,14 +31,5 @@ function filtreImages(categoriesBouton){
             container.appendChild(imagesFiltered[i]);
         };
     }; 
-    if(imagesFiltered.length < 3 && imagesFiltered.length !== 0){
-        container.style.gridTemplateColumns = "1fr 1fr";
-        for ( let i=0; i<imagesFiltered.length;i++){
-            imagesFiltered[i].style.width = "40vw";
-            imagesFiltered[i].style.height = "40vw";
-        };         
-    }else{
-        container.style.gridTemplateColumns = "1fr 1fr 1fr";
-    }
 };
 

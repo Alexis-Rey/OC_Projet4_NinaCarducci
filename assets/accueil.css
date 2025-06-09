@@ -218,7 +218,7 @@ h2{
 	font-family: Spectral;
 	font-style: italic;
 	font-weight: 300;
-	font-size: 40px;
+	font-size: 2.5em;
 	line-height: 1.2;
 }
 .quote__author {
@@ -364,6 +364,9 @@ input[type="submit"] {
 		width: 40vw;
 		height: 40vw;
 	}
+	.quote__text{
+		font-size: 2em;;
+	}
 	#services .container {
 		flex-direction: column;
 	}
@@ -456,5 +459,8 @@ input[type="submit"] {
 	}
 	.gallery__menu-options{
 		width: 80%;
+	}
+	.quote__text{
+		font-size: 1.5em;;
 	}
 }
