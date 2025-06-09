@@ -58,7 +58,7 @@
         </div>
     </header>
 <main>
-	<section id="about">
+	<section id="about" role="region" aria-labelledby="about-me__title">
 		<div class="about__picture">
 			<img src="./assets/images/nina.png" alt="Photographie de Nina Caruducci">
 		</div>
@@ -69,30 +69,31 @@
 				C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
 		</div>
 	</section>
-	<div id="gallery">
-		<h3 class="title">Portfolio</h3>
-		<div class="container py-3">
-			<div class="gallery" style="display: none">
-				<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg"/>
-				<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg"/>
-				<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg"/>
-				<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg"/>
-				<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg"/>
-				<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg"/>
-				<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg"/>
-				<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg"/>
-				<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg"/>
-			</div>
+	<section id="gallery" role="region" aria-labelledby="gallery__title">
+		<h2 class="gallery__title">Portfolio</h2>
+		<div class="gallery__menu">
+				<button data-menu-tag="Tous" class="gallery__menu-options" aria-current="true">Tous</button>
+				<button data-menu-tag="Concert" class="gallery__menu-options" aria-current="false">Concert</button>
+				<button data-menu-tag="Entreprises" class="gallery__menu-options" aria-current="false">Entreprises</button>
+				<button data-menu-tag="Mariages" class="gallery__menu-options" aria-current="false">Mariages</button>
+				<button data-menu-tag="Portrait" class="gallery__menu-options" aria-current="false">Portrait</button>
 		</div>
-		<div class="quote">
-			<figure>
-				<blockquote>
-					<p class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</p>
-				</blockquote>
-				<figcaption class="quote__author">- Richard Avedon</figcaption>
-			</figure>
+		<div class="gallery__grid">
+			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg" alt="Photo du concert d'Aaron Paul"/>
+			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg" alt="Photo d'un homme en costume"/>
+			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg" alt="Photo d'une femme souriante dans son entreprise"/>
+			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg" alt="Photo d'un mariage : deux mariées face à face se tiennent les mains"/>
+			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg" alt="Photo portrait d'un homme au soleil"/>
+			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg" alt="Photo d'un mariage: le couple heureux se regarde avec complicité"/>
+			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg" alt="Photo portrait en contre-plongée d'une jeune femme "/>
+			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg" alt="Photo du concert d'Austin Neill"/>
+			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg" alt="Photo d'une femme qui partage un moment amusant en entreprise"/>
 		</div>
-	</div>
+		<blockquote class="quote">
+			<p class="quote__text">Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</p>
+			<cite class="quote__author">- Richard Avedon</cite>
+		</blockquote>
+	</section>
 	<div id="services">
 		<h3 class="title">Mes services</h3>
 		<div class="container">
