@@ -10,7 +10,7 @@ body {
 h2{
 	font-weight: 500;
 }
-.menu {
+.menu{
 	background-color: white;
 	position: fixed;
 	top:0;
@@ -21,13 +21,13 @@ h2{
 	padding-inline: 100px;
 	padding-block: 30px;
 }
-.menu__title-name {
+.menu__title-name{
 	font-size: 26px;
 	color: #212529;
 	margin: 0;
 	font-weight: 500;
 }
-.menu__nav ul {
+.menu__nav ul{
 	display: flex;
 	list-style-type: none;
 	font-size: 14px;
@@ -35,14 +35,14 @@ h2{
 	margin-top: 11px;
 	height: 22px;
 }
-.menu__nav li {
+.menu__nav li{
 	padding-inline: 10px;
 }
-.menu__nav a, .menu__title-name a {
+.menu__nav a, .menu__title-name a{
 	text-decoration: none;
 	color: #212529
 }
-.menu__social-link img {
+.menu__social-link img{
 	width: 20px;
 	height: 20px;
 	position: relative;
@@ -212,27 +212,30 @@ h2{
 	object-fit: cover;
 	cursor: pointer;
 }
-.quote {
+.quote, .services__under-quote {
 	font-family: 'Spectral';
 	font-style: italic;
 	width: 70%;
 	margin: auto;
 	padding-block: 3em;
 }
-.quote__text {
+.services__under-quote .quote__text{
+	margin: 0 0 24px 0;
+}
+.quote__text{
 	font-family: Spectral;
 	font-style: italic;
 	font-weight: 300;
 	font-size: 2.5em;
 	line-height: 1.2;
 }
-.quote__author {
+.quote__author{
 	font-family: Spectral;
 	font-weight: 800;
 	font-size: 22px;
 }
 
-#services {
+#services{
 	margin: auto;
 	background-color: #A8D5D8 ;
 	position: relative;
@@ -260,6 +263,9 @@ h2{
 	padding-block: 2em;
 	font-size: 28px;
 	margin: 0 0 8px 0;
+	position: relative;
+	z-index: 1;
+	background-color: #A8D5D8;
 }
 .services_card-1, .services_card-2, .services_card-3{
 	background-color: white;
@@ -299,10 +305,10 @@ h2{
 	padding-block: 100px;
 }
 
-#contact .container {
+.contact__container {
 	display: flex;
 }
-.picture.right::before {
+.contact__picture::before {
 	content: ' ';
 	background-color: #BEB45A;
 	width: 374px;
@@ -310,28 +316,44 @@ h2{
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	z-index: -1;
+	z-index: 0;
 }
-.form-container {
+.contact__container-form{
 	flex : 2;
-
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
-form {
+.contact__container-form form {
 	display: flex;
 	flex-direction: column;
 	width: 70%;
 	align-items: flex-start;
 }
-
-form input {
+.contact__container-form h2{
+	font-size: 1.75rem;
+	margin: 0 0 8px 0;
+}
+.contact__container-form p{
+	margin-top: 0;
+  	margin-bottom: 1rem;
+	font-size: 1rem;
+	font-weight: 400;
+}
+.contact__container-form label{
+	margin-top: 0;
+	font-size: 1rem;
+	font-weight: 400;
+}
+.contact__container-form input {
 	width: 100%;
 	background-color: transparent;
 	border: solid 1px;
-	height: 2.5em;
+	height: 3em;
 	margin-bottom: 20px;
 }
 
-form textarea {
+.contact__container-form textarea {
 	width: 100%;
 	background-color: transparent;
 	border: solid 1px;
@@ -340,16 +362,31 @@ form textarea {
 	font-size: 1.2em;
 	margin-bottom: 20px;
 }
-input[type="submit"] {
+.contact__container-form input[type="submit"] {
 	background-color: #BEB45A;
-	padding: .5em 1em
+	padding: .5em 1em;
+	font-size: 1rem;
+	cursor: pointer;
+}
+.contact__container-form input[type="submit"]:hover {
+	color: white;
+}
+
+.contact__picture{
+	flex: 1;
+	margin: 0 20px;
+}
+.contact__picture img{
+	width: 30vw;
+	height: 30vw;
+	position: relative;
+	z-index: 1;
+	top: 1vh;
+	right: 2vw;
 }
 
 @media all and (max-width: 1180px) {
-	.picture {
-		flex : 2;
-	}
-	#about, #contact .container {
+	#about{
 		align-items: center;
 	}
 	.about-me__title {
@@ -359,14 +396,28 @@ input[type="submit"] {
 	#about-me h2, #about-me p {
 		width: 100%;
 	}
+	.contact__picture img{
+		width: 40vh;
+    	height: auto;
+    	top: 5vh;
+    	left: 1vw;
+  	}
+	.contact__container-form{
+		align-items: start;
+	}
+	.contact__container-form form{
+		width: 100%;
+	}
+	.contact__container-form h2{
+		width: 150%;
+	}
 }
 
 @media all and (max-width: 1024px) {
 	#about{
 		flex-direction: column;
-
 	}
-	.about__picture, .picture{
+	.about__picture, .contact__picture{
 		width: 75%;
 	}
 	.about__picture::before {
@@ -396,20 +447,23 @@ input[type="submit"] {
 	.quote__text{
 		font-size: 2em;;
 	}
-	#services .container {
+	.services__container {
 		flex-direction: column;
 	}
-	.service {
+	#services .services__container{
+		width: 75%;
+	}
+	.services_card-1, .services_card-2, .services_card-3{
 		width: 100%;
 		max-width: 100%;
 		height: auto;
 		margin: 2em 0
 	}
-	.service__description{
+	.services_card-1-description, .services_card-2-description, .services_card-3-description{
 		margin-bottom: 1em;
 	}
 
-	#services .container::before{
+	#services .services__container::before{
 		width: 30%;
 		height: 100%;
 		bottom: 0;
@@ -417,21 +471,14 @@ input[type="submit"] {
 		left: auto;
 		z-index: 0;
 	}
-
-	#contact .container {
-		flex-direction: column;
+	#contact{
+		padding-inline: 2em;
+		padding-block: 2em;
 	}
-	#contact .picture.right {
-		margin-top: 1em;
+	.contact__container-form h2{
+		width: 400%;
 	}
-	.picture.right::before {
-		width: 100%;
-		height: 30%;
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		z-index: -1;
-	}
+	
 }
 
 @media all and (max-width: 768px) {
@@ -450,15 +497,10 @@ input[type="submit"] {
 	.carousel{
 		margin-top: 152px;
 	}
-	.about__picture::before, .picture.right::before {
+	.about__picture::before{
 		height: 40vw;
 	}
-	#services .container {
-		align-items: center;
-	}
-	.service {
-		max-width: 90%;
-	}
+
 	#about, #contact {
 		padding-inline: 2em;
 		padding-block: 2em;
@@ -466,12 +508,18 @@ input[type="submit"] {
 	form {
 		width: 100%;
 	}
-	.picture {
-		width: 80%;
+	.contact__picture img{
+		top: 0;
+	}
+	.contact__container{
+		flex-direction: column;
 	}
 }
 
 @media all and (max-width: 600px){
+	.menu__nav li{
+		padding-inline: 0;
+	}
 	.gallery__grid{
 	grid-template-columns: 1fr;
 	row-gap: 15px;
@@ -491,5 +539,21 @@ input[type="submit"] {
 	}
 	.quote__text{
 		font-size: 1.5em;;
+	}
+	#services .services__container{
+		width: 90%;
+    	margin: auto;
+	}
+	.contact__picture img{
+		width: 70vw;
+		top: 0;
+		left: 2vw;
+	}
+	.contact__picture::before{
+		width: 50vw;
+		height: 50vw;
+	}
+	.contact__container-form h2{
+		width: 80vw;
 	}
 }
