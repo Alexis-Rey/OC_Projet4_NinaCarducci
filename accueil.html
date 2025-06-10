@@ -90,7 +90,7 @@
 			<cite class="quote__author">- Richard Avedon</cite>
 		</blockquote>
 	</section>
-	<aside id="services">
+	<aside id="services" role="region" aria-labelledby="services__title">
 		<h2 class="services__title">Mes services</h2>
 		<div class="services__container">
 			<article class="services_card-1">
@@ -129,10 +129,10 @@
 		<p class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</p>
 		<cite class="quote__author">- Richard Avedon</cite>
 	</blockquote>
-	<footer id="contact">
+	<footer id="contact" role="region" aria-labelledby="contact__container-title">
 		<div class="contact__container">
 			<div class="contact__container-form">
-				<h2>Une question ? Une demande de devis ?</h2>
+				<h2 class="contact__container-title">Une question ? Une demande de devis ?</h2>
 				<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
 				<form action="" method="post">
 					<label for="nom">Nom</label>
@@ -150,5 +150,22 @@
 		</div>
 	</footer>
 </main>
+<dialog id="modal">
+		<div class="modal__content">
+			<figure class="modal__content-figure">
+				<img class="modal__content-figure-img" src="" loading="lazy" alt="">
+			</figure>
+		</div>
+		<div class="modal__bouton-slide">
+                <button class="modal__prev" type="button">
+                    <i class="modal__icone fa-solid fa-2xl fa-chevron-left" aria-hidden="true"></i>
+                    <span class="sr-only">Photo Précèdante</span>
+                </button>
+                <button class="modal__next" type="button">
+                    <i class="modal__icone fa-solid fa-2xl fa-chevron-right" aria-hidden="true" autofocus ></i>
+                    <span class="sr-only">Photo Suivante</span>
+                </button>
+            </div>
+	</dialog>
 </body>
 </html>
