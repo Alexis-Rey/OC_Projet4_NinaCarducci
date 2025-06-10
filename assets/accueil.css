@@ -32,6 +32,8 @@ h2{
 	list-style-type: none;
 	font-size: 14px;
 	margin-bottom: 0;
+	margin-top: 11px;
+	height: 22px;
 }
 .menu__nav li {
 	padding-inline: 10px;
@@ -42,6 +44,9 @@ h2{
 }
 .menu__social-link img {
 	width: 20px;
+	height: 20px;
+	position: relative;
+	bottom: 1px;
 }
 .carousel{
 	position:relative;
@@ -232,7 +237,7 @@ h2{
 	background-color: #A8D5D8 ;
 	position: relative;
 }
-#services .container::before{
+#services .services__container::before{
 	content: ' ';
 	background-color: #1C6474;
 	position: absolute;
@@ -243,14 +248,20 @@ h2{
 	z-index: 0;
 }
 
-#services .container {
+#services .services__container{
 	justify-content: space-between;
 	display: flex;
 	padding : 2em 0;
-
+	margin: auto;
+	width: 91.4vw;
 }
-
-.service {
+.services__title{
+	text-align: center;
+	padding-block: 2em;
+	font-size: 28px;
+	margin: 0 0 8px 0;
+}
+.services_card-1, .services_card-2, .services_card-3{
 	background-color: white;
 	max-width: 390px;
 	width: 30%;
@@ -261,7 +272,25 @@ h2{
 	justify-content: space-between;
 	z-index: 1;
 }
-
+.services_card-1 h3, .services_card-2 h3, .services_card-3 h3{
+	font-size: 28px;
+	font-weight: 500;
+	margin: 0 0 8px 0;
+}
+.services_card-1 h4, .services_card-2 h4, .services_card-3 h4{
+	font-size: 24px;
+	font-weight: 500;
+	margin: 0 0 8px 0;
+}
+.services_card-1-description p, .services_card-2-description p, .services_card-3-description p{
+	font-size: 16px;
+	margin-top: 0;
+}
+.services_card-1-price p, .services_card-2-price p, .services_card-3-price p{
+	font-size: 16px;
+	font-weight: 400;
+	margin: 0;
+}
 #contact {
 	margin: auto;
 	background-color: #D8D3A8 ;
