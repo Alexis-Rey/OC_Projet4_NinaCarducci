@@ -389,8 +389,8 @@ h2{
 	position: fixed;
     top: 0;
     left: 0;
-    width: 60%;
-    height: 60%;
+    width: 70%;
+    height: 85%;
 	overflow: hidden;
     background-color: rgba(0,0,0,0.6);
     z-index: 1000;
@@ -412,9 +412,9 @@ h2{
 }
 .modal__content-figure img{
 	width: 75%;
-	height: 75%;
+	height: 85%;
 	margin: auto;
-	border-radius: 50%;
+	border-radius: 25%;
 	border: solid 5px black;
 }
 .modal__bouton-slide{
