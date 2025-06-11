@@ -110,19 +110,4 @@ for(let b= 0; b<boutonsMenu.length; b++){
   });
 };
 
-// for(let b = 0; b<boutonsMenu.length; b++){
-//     boutonsMenu[b].addEventListener("click", () =>{
-//         currentIndex = b;
-//         clearInterval(interval);
-//         interval = setInterval(nextImage, 5000);
 
-//         // Réorganise les images
-//         for (let i = 0; i<arrayCarouselRight.length; i++){
-//             arrayCarouselRight[i].style.order = (i - b + arrayCarouselRight.length) % arrayCarouselRight.length;
-//         }
-
-//         majBoutonColor(b);
-//         gallery.style.transition = "none"; // pas d’animation ici pour éviter le saut
-//         gallery.style.transform = "translateX(0%)";
-//     });
-// };

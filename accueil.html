@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="./assets/carousel.js" defer></script>
-    <script src="./assets/gallery.js" defer></script>
-    <script src="./assets/modal.js" defer></script>
+    <script type="module" src="./assets/carousel.js"></script>
+    <script type="module" src="./assets/gallery.js"></script>
+    <script type="module" src="./assets/modal.js"></script>
 </head>
 <body>
     <header id="js-header">
@@ -76,15 +76,15 @@
 				<button data-menu-tag="Portrait" class="gallery__menu-options" aria-current="false">Portrait</button>
 		</div>
 		<div class="gallery__grid">
-			<img id="gallery__image-1" loading="lazy" data-gallery-tag="Concert" class="gallery__image" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg" alt="Photo du concert d'Aaron Paul"/>
-			<img id="gallery__image-2" loading="lazy" data-gallery-tag="Entreprises" class="gallery__image" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg" alt="Photo d'un homme en costume"/>
-			<img id="gallery__image-3" loading="lazy" data-gallery-tag="Entreprises" class="gallery__image" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg" alt="Photo d'une femme souriante dans son entreprise"/>
-			<img id="gallery__image-4" loading="lazy" data-gallery-tag="Mariages" class="gallery__image" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg" alt="Photo d'un mariage : deux mariées face à face se tiennent les mains"/>
-			<img id="gallery__image-5" loading="lazy" data-gallery-tag="Portrait" class="gallery__image" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg" alt="Photo portrait d'un homme au soleil"/>
-			<img id="gallery__image-6" loading="lazy" data-gallery-tag="Mariages" class="gallery__image" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg" alt="Photo d'un mariage: le couple heureux se regarde avec complicité"/>
-			<img id="gallery__image-7" loading="lazy" data-gallery-tag="Portrait" class="gallery__image" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg" alt="Photo portrait en contre-plongée d'une jeune femme "/>
-			<img id="gallery__image-8" loading="lazy" data-gallery-tag="Concert" class="gallery__image" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg" alt="Photo du concert d'Austin Neill"/>
-			<img id="gallery__image-9" loading="lazy" data-gallery-tag="Entreprises" class="gallery__image" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg" alt="Photo d'une femme qui partage un moment amusant en entreprise"/>
+			<img id="gallery__image-1" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Concert" class="gallery__image" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg" alt="Photo du concert d'Aaron Paul" tabindex="0"/>
+			<img id="gallery__image-2" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Entreprises" class="gallery__image" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg" alt="Photo d'un homme en costume" tabindex="0"/>
+			<img id="gallery__image-3" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Entreprises" class="gallery__image" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg" alt="Photo d'une femme souriante dans son entreprise" tabindex="0"/>
+			<img id="gallery__image-4" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Mariages" class="gallery__image" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg" alt="Photo d'un mariage : deux mariées face à face se tiennent les mains" tabindex="0"/>
+			<img id="gallery__image-5" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Portrait" class="gallery__image" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg" alt="Photo portrait d'un homme au soleil" tabindex="0"/>
+			<img id="gallery__image-6" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Mariages" class="gallery__image" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg" alt="Photo d'un mariage: le couple heureux se regarde avec complicité" tabindex="0"/>
+			<img id="gallery__image-7" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Portrait" class="gallery__image" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg" alt="Photo portrait en contre-plongée d'une jeune femme " tabindex="0"/>
+			<img id="gallery__image-8" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Concert" class="gallery__image" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg" alt="Photo du concert d'Austin Neill" tabindex="0"/>
+			<img id="gallery__image-9" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Entreprises" class="gallery__image" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg" alt="Photo d'une femme qui partage un moment amusant en entreprise" tabindex="0"/>
 		</div>
 		<blockquote class="quote">
 			<p class="quote__text">Un portrait n’est pas une ressemblance.<br> Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</p>
@@ -151,22 +151,23 @@
 		</div>
 	</footer>
 </main>
-<dialog id="modal">
+<dialog id="modal" aria-modal="true" aria-label="Galerie Photo">
 		<div class="modal__content">
+			<button autofocus class="modal__content-bouton-close" type="button" aria-label="Fermer la galerie"><i class="fa-regular fa-2xl fa-circle-xmark" aria-hidden="true"></i></button>
 			<figure class="modal__content-figure">
 				<img class="modal__content-figure-img" src="" loading="lazy" alt="">
 			</figure>
 		</div>
 		<div class="modal__bouton-slide">
-                <button class="modal__prev" type="button">
+                <button data-id="1" class="modal__prev" type="button">
                     <i class="modal__icone fa-solid fa-2xl fa-chevron-left" aria-hidden="true"></i>
                     <span class="sr-only">Photo Précèdante</span>
                 </button>
-                <button class="modal__next" type="button">
-                    <i class="modal__icone fa-solid fa-2xl fa-chevron-right" aria-hidden="true" autofocus ></i>
+                <button data-id="2" class="modal__next" type="button">
+                    <i class="modal__icone fa-solid fa-2xl fa-chevron-right" aria-hidden="true"></i>
                     <span class="sr-only">Photo Suivante</span>
                 </button>
             </div>
-	</dialog>
+</dialog>
 </body>
 </html>
