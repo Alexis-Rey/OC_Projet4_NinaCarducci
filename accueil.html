@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nina Carducci, photographe professionnel et passioné par l'univers photographique">
+    <meta name="description" content="Portfolio de Nina Carducci, photographe professionnelle passionnée par la capture d'émotions et de moments uniques à travers l'image.">
     <title>Nina Carducci - Photographe</title>
     <link rel="icon" href="./assets/images/icone.ico" type="image/x-icon">
 	<link rel="stylesheet" href="./assets/accueil.css">
@@ -12,7 +12,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
+          crossorigin="anonymous" referrerpolicy="no-referrer">
     <script type="module" src="./assets/carousel.js"></script>
     <script type="module" src="./assets/gallery.js"></script>
     <script type="module" src="./assets/modal.js"></script>
@@ -33,9 +33,15 @@
         </div>
         <div id="js-carousel" class="carousel" role="region" aria-label="Carousel d’images">
             <div class="carousel__gallery">
-                    <img src="./assets/images/slider/ryoji-iwata.jpg" class="carousel__image" alt="Première Image du carousel - un homme en costume traverse la rue" aria-hidden="false" aria-current="true">
-                    <img src="./assets/images/slider/nicholas-green.jpg" class="carousel__image" loading="lazy" alt="Deuxième Image du carousel - une foule en joie à un concert" aria-hidden="true">
-                    <img src="./assets/images/slider/edward-cisneros.jpg" class="carousel__image" loading="lazy" alt="Troisème Image du carousel - Célébration de mariage - baiser d'un couple durant la première danse" aria-hidden="true">
+                    <img src="./assets/images/slider/ryoji-iwata-desk.webp" class="carousel__image" alt="Première Image du carousel - un homme en costume traverse la rue" aria-hidden="false" aria-current="true"
+					srcset="./assets/images/slider/ryoji-iwata-mob.webp 600w,./assets/images/slider/ryoji-iwata-tab.webp 1200w,./assets/images/slider/ryoji-iwata-desk.webp 1900w"
+					sizes="(max-width: 600px) 100vw,(max-width: 1200px) 100vw, 100vw">
+                    <img src="./assets/images/slider/nicholas-green-desk.webp" class="carousel__image" loading="lazy" alt="Deuxième Image du carousel - une foule en joie à un concert" aria-hidden="true"
+					srcset="./assets/images/slider/nicholas-green-mob.webp 600w,./assets/images/slider/nicholas-green-tab.webp 1200w,./assets/images/slider/nicholas-green-desk.webp 1900w"
+					sizes="(max-width: 600px) 100vw,(max-width: 1200px) 100vw, 100vw">
+                    <img src="./assets/images/slider/edward-cisneros-desk.webp" class="carousel__image" loading="lazy" alt="Troisème Image du carousel - Célébration de mariage - baiser d'un couple durant la première danse" aria-hidden="true"
+					srcset="./assets/images/slider/edward-cisneros-mob.webp 600w,./assets/images/slider/edward-cisneros-tab.webp 1200w,./assets/images/slider/edward-cisneros-desk.webp 1900w"
+					sizes="(max-width: 600px) 100vw,(max-width: 1200px) 100vw, 100vw">
             </div>
             <div class="carousel__bouton-menu">
                 <button type="button" class="carousel__bouton carousel__bouton--actived" aria-current="true" aria-label="Photo 1"></button>
@@ -45,7 +51,7 @@
             <div class="carousel__bouton-slide">
                 <button class="carousel__prev" type="button">
                     <i class="carousel__icone fa-solid fa-2xl fa-chevron-left" aria-hidden="true"></i>
-                    <span class="sr-only">Photo Précèdante</span>
+                    <span class="sr-only">Photo Précédante</span>
                 </button>
                 <button class="carousel__next" type="button">
                     <i class="carousel__icone fa-solid fa-2xl fa-chevron-right" aria-hidden="true"></i>
@@ -55,9 +61,9 @@
         </div>
     </header>
 <main>
-	<section id="about" role="region" aria-labelledby="about-me__title">
+	<section id="about">
 		<div class="about__picture">
-			<img loading="lazy" src="./assets/images/nina.png" alt="Photographie de Nina Caruducci">
+			<img loading="lazy" src="./assets/images/nina.webp" alt="Photographie de Nina Caruducci">
 		</div>
 		<div id="about-me">
 			<h2 class="about-me__title">A propos de moi</h2>
@@ -66,7 +72,7 @@
 				C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
 		</div>
 	</section>
-	<section id="gallery" role="region" aria-labelledby="gallery__title">
+	<section id="gallery">
 		<h2 class="gallery__title">Portfolio</h2>
 		<div class="gallery__menu">
 				<button data-menu-tag="Tous" class="gallery__menu-options gallery__menu-options--actived" aria-current="true">Tous</button>
@@ -76,22 +82,22 @@
 				<button data-menu-tag="Portrait" class="gallery__menu-options" aria-current="false">Portrait</button>
 		</div>
 		<div class="gallery__grid">
-			<img id="gallery__image-1" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Concert" class="gallery__image" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg" alt="Photo du concert d'Aaron Paul" tabindex="0"/>
-			<img id="gallery__image-2" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Entreprises" class="gallery__image" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg" alt="Photo d'un homme en costume" tabindex="0"/>
-			<img id="gallery__image-3" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Entreprises" class="gallery__image" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg" alt="Photo d'une femme souriante dans son entreprise" tabindex="0"/>
-			<img id="gallery__image-4" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Mariages" class="gallery__image" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg" alt="Photo d'un mariage : deux mariées face à face se tiennent les mains" tabindex="0"/>
-			<img id="gallery__image-5" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Portrait" class="gallery__image" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg" alt="Photo portrait d'un homme au soleil" tabindex="0"/>
-			<img id="gallery__image-6" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Mariages" class="gallery__image" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg" alt="Photo d'un mariage: le couple heureux se regarde avec complicité" tabindex="0"/>
-			<img id="gallery__image-7" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Portrait" class="gallery__image" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg" alt="Photo portrait en contre-plongée d'une jeune femme " tabindex="0"/>
-			<img id="gallery__image-8" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Concert" class="gallery__image" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg" alt="Photo du concert d'Austin Neill" tabindex="0"/>
-			<img id="gallery__image-9" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Entreprises" class="gallery__image" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg" alt="Photo d'une femme qui partage un moment amusant en entreprise" tabindex="0"/>
+			<img id="gallery__image-1" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Concert" class="gallery__image" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-desk.webp" alt="Photo du concert d'Aaron Paul" tabindex="0">
+			<img id="gallery__image-2" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Entreprises" class="gallery__image" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-desk.webp" alt="Photo d'un homme en costume" tabindex="0">
+			<img id="gallery__image-3" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Entreprises" class="gallery__image" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-desk.webp" alt="Photo d'une femme souriante dans son entreprise" tabindex="0">
+			<img id="gallery__image-4" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Mariages" class="gallery__image" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-desk.webp" alt="Photo d'un mariage : deux mariées face à face se tiennent les mains" tabindex="0">
+			<img id="gallery__image-5" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Portrait" class="gallery__image" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-desk.webp" alt="Photo portrait d'un homme au soleil" tabindex="0">
+			<img id="gallery__image-6" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Mariages" class="gallery__image" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-desk.webp" alt="Photo d'un mariage: le couple heureux se regarde avec complicité" tabindex="0">
+			<img id="gallery__image-7" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Portrait" class="gallery__image" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-desk.webp" alt="Photo portrait en contre-plongée d'une jeune femme " tabindex="0">
+			<img id="gallery__image-8" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Concert" class="gallery__image" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-desk.webp" alt="Photo du concert d'Austin Neill" tabindex="0">
+			<img id="gallery__image-9" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Entreprises" class="gallery__image" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-desk.webp" alt="Photo d'une femme qui partage un moment amusant en entreprise" tabindex="0">
 		</div>
 		<blockquote class="quote">
 			<p class="quote__text">Un portrait n’est pas une ressemblance.<br> Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</p>
 			<cite class="quote__author">- Richard Avedon</cite>
 		</blockquote>
 	</section>
-	<aside id="services" role="region" aria-labelledby="services__title">
+	<aside id="services">
 		<h2 class="services__title">Mes services</h2>
 		<div class="services__container">
 			<article class="services_card-1">
@@ -130,32 +136,32 @@
 		<p class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</p>
 		<cite class="quote__author">- Richard Avedon</cite>
 	</blockquote>
-	<footer id="contact" role="region" aria-labelledby="contact__container-title">
+	<footer id="contact">
 		<div class="contact__container">
 			<div class="contact__container-form">
 				<h2 class="contact__container-title">Une question ? Une demande de devis ?</h2>
-				<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
-				<form action="" method="post">
+				<p> N’hésitez pas à m’écrire ! Je vous répondrai en moins de 24 heures</p>
+				<form action="#" method="post">
 					<label for="nom">Nom</label>
 					<input type="text" name="nom" id="nom" required>
 					<label for="email">Email</label>
 					<input type="email" name="email" id="email" required>
 					<label for="message">Message</label>
 					<textarea name="message" id="message" cols="30" rows="10" required></textarea>
-					<input type="submit" value="Envoyer"/>
+					<input type="submit" value="Envoyer">
 				</form>
 			</div>
 			<div class="contact__picture">
-				<img src="./assets/images/camera.png" loading="lazy" alt="Image décorative d'un appareil photo" aria-hidden="true">
+				<img src="./assets/images/camera.webp" loading="lazy" alt="Image décorative d'un appareil photo" aria-hidden="true">
 			</div>
 		</div>
 	</footer>
 </main>
-<dialog id="modal" aria-modal="true" aria-label="Galerie Photo">
+<dialog id="modal" class="modal" aria-modal="true" aria-label="Galerie Photo">
 		<div class="modal__content">
 			<button autofocus class="modal__content-bouton-close" type="button" aria-label="Fermer la galerie"><i class="fa-regular fa-2xl fa-circle-xmark" aria-hidden="true"></i></button>
 			<figure class="modal__content-figure">
-				<img class="modal__content-figure-img" src="" loading="lazy" alt="">
+				<img class="modal__content-figure-img" src="#" loading="lazy" alt="">
 			</figure>
 		</div>
 		<div class="modal__bouton-slide">

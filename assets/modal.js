@@ -11,14 +11,14 @@ export function openModal(imagesFromGallery){
         imagesFromGallery[i].addEventListener("click", () =>{
             modal.showModal();
             closeButton.focus();
-            showImage(imagesFromGallery[i],imagesFromGallery);
+            showImage(imagesFromGallery[i]);
         });
         imagesFromGallery[i].addEventListener("keydown", (e) =>{
             if(e.key === 'Enter' || e.key === ' '){
                 e.preventDefault();
                 modal.showModal();
                 closeButton.focus();
-                showImage(imagesFromGallery[i],imagesFromGallery);  
+                showImage(imagesFromGallery[i]);  
             }; 
         });
     };
@@ -41,6 +41,7 @@ function showImage(captureImage) {
     document.body.style.overflow = "hidden";
     waitingImage.src = captureImage.src;
     waitingImage.alt = captureImage.alt;
+    resizeModal(waitingImage);
 }
 
 function navImage(direction,imagesFromGallery){
@@ -53,7 +54,19 @@ function navImage(direction,imagesFromGallery){
     };
     waitingImage.src = imagesFromGallery[nextIndex].src;
     waitingImage.alt = imagesFromGallery[nextIndex].alt
+    resizeModal(waitingImage);
+    
 };
+
+function resizeModal(waitingImage){
+    const x  = waitingImage.naturalWidth;
+    const y  = waitingImage.naturalHeight;
+    if(x>y){
+        modal.classList.remove("portrait");
+    }else{
+        modal.classList.add("portrait");
+    }
+}
 
 function closeModal(){
     closeButtonIcone.addEventListener("mouseenter",(e)=>{

@@ -34,13 +34,13 @@ function filtreImages(categoriesBouton){
     if(categoriesBouton === "Tous"){
         for( let i=0; i<images.length;i++){
             container.appendChild(images[i]);
-            openModal(images);
         };
+        openModal(images);
     }else{
         for( let i=0; i<imagesFiltered.length;i++){
             container.appendChild(imagesFiltered[i]);
-            openModal(imagesFiltered);
         };
+        openModal(imagesFiltered);
     };
 };
 
