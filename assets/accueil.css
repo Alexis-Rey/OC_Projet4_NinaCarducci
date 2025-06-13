@@ -227,7 +227,8 @@ h2{
 	cursor: pointer;
 }
 .gallery__menu-options--actived{
-	color: white;
+	color: black;
+	font-weight: 700;
 	background: var(--primary-color);
 }
 .gallery__image{
