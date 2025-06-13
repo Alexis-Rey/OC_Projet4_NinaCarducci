@@ -493,6 +493,9 @@ h2{
 .modal__icone{
   pointer-events: none;
 }
+.modal:not([open]) {
+  display: none;
+}
 @media all and (max-width: 1180px) {
 	#about{
 		align-items: center;
