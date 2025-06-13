@@ -1,5 +1,4 @@
 const modal = document.getElementById("modal");
-const closeButtonIcone = document.querySelector(".modal__content-bouton-close i");
 const closeButton = document.querySelector(".modal__content-bouton-close ");
 const waitingImage = document.querySelector(".modal__content-figure-img");
 let direction;
@@ -69,14 +68,6 @@ function resizeModal(waitingImage){
 }
 
 function closeModal(){
-    closeButtonIcone.addEventListener("mouseenter",(e)=>{
-        e.target.classList.remove("fa-regular");
-        e.target.classList.add("fa-solid");
-    });
-    closeButtonIcone.addEventListener("mouseleave",(e)=>{
-        e.target.classList.remove("fa-solid");
-        e.target.classList.add("fa-regular");
-    });
     closeButton.addEventListener("click",()=>{
         modal.close();
         document.body.style.overflow="";

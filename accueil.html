@@ -10,9 +10,6 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-          crossorigin="anonymous" referrerpolicy="no-referrer">
     <script type="module" src="./assets/carousel.js"></script>
     <script type="module" src="./assets/gallery.js"></script>
     <script type="module" src="./assets/modal.js"></script>
@@ -50,11 +47,15 @@
             </div>
             <div class="carousel__bouton-slide">
                 <button class="carousel__prev" type="button">
-                    <i class="carousel__icone fa-solid fa-2xl fa-chevron-left" aria-hidden="true"></i>
+                    <svg class="carousel__prev-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
+        				<path d="M34.9 239l194-194c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L131.5 256l154 154c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0l-194-194c-9.5-9.4-9.5-24.6-.1-34z"/>
+      				</svg>
                     <span class="sr-only">Photo Précédante</span>
                 </button>
                 <button class="carousel__next" type="button">
-                    <i class="carousel__icone fa-solid fa-2xl fa-chevron-right" aria-hidden="true"></i>
+                    <svg class="carousel__next-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
+        				<path d="M285.5 273L91.5 467c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9L188.5 256 34.9 102.5c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l194 194c9.4 9.4 9.4 24.6 0 33.9z"/>
+      				</svg>
                     <span class="sr-only">Photo Suivante</span>
                 </button>
             </div>
@@ -159,18 +160,26 @@
 </main>
 <dialog id="modal" class="modal" aria-modal="true" aria-label="Galerie Photo">
 		<div class="modal__content">
-			<button autofocus class="modal__content-bouton-close" type="button" aria-label="Fermer la galerie"><i class="fa-regular fa-2xl fa-circle-xmark" aria-hidden="true"></i></button>
+			<button autofocus class="modal__content-bouton-close" type="button" aria-label="Fermer la galerie">
+      			<svg class="modal__content-bouton-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40" height="40" fill="currentColor" aria-hidden="true" focusable="false">
+        		<path d="M256 8C119 8 8 119.1 8 256s111 248 248 248 248-111.1 248-248S393 8 256 8zm96.5 313.5c6.2 6.2 6.2 16.4 0 22.6l-22.6 22.6c-6.2 6.2-16.4 6.2-22.6 0L256 301.3l-51.3 51.3c-6.2 6.2-16.4 6.2-22.6 0l-22.6-22.6c-6.2-6.2-6.2-16.4 0-22.6L209.3 256l-51.3-51.3c-6.2-6.2-6.2-16.4 0-22.6l22.6-22.6c6.2-6.2 16.4-6.2 22.6 0L256 210.7l51.3-51.3c6.2-6.2 16.4-6.2 22.6 0l22.6 22.6c6.2 6.2 6.2 16.4 0 22.6L302.7 256l51.3 51.5z"/>
+      			</svg>
+    		</button>
 			<figure class="modal__content-figure">
 				<img class="modal__content-figure-img" src="#" loading="lazy" alt="">
 			</figure>
 		</div>
 		<div class="modal__bouton-slide">
                 <button data-id="1" class="modal__prev" type="button">
-                    <i class="modal__icone fa-solid fa-2xl fa-chevron-left" aria-hidden="true"></i>
+                     <svg class="modal__prev-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
+        				<path d="M34.9 239l194-194c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L131.5 256l154 154c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0l-194-194c-9.5-9.4-9.5-24.6-.1-34z"/>
+      				</svg>
                     <span class="sr-only">Photo Précèdante</span>
                 </button>
                 <button data-id="2" class="modal__next" type="button">
-                    <i class="modal__icone fa-solid fa-2xl fa-chevron-right" aria-hidden="true"></i>
+                    <svg class="modal__next-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false">
+        				<path d="M285.5 273L91.5 467c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9L188.5 256 34.9 102.5c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l194 194c9.4 9.4 9.4 24.6 0 33.9z"/>
+      				</svg>
                     <span class="sr-only">Photo Suivante</span>
                 </button>
             </div>

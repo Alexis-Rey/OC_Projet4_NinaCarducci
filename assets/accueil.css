@@ -105,12 +105,15 @@ h2{
 	height: 40px;
 	width: 40px;
 	border-radius: 5px;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
 }
-.fa-chevron-left, .fa-chevron-right{
+.carousel__prev-svg, .carousel__next-svg{
 	color: white;
 	opacity: 80%;
 }
-.fa-chevron-left:hover, .fa-chevron-right:hover{
+.carousel__prev-svg:hover, .carousel__next-svg:hover, .modal__prev-svg:hover, .modal__next-svg:hover, .modal__content-bouton-svg:hover{
 	opacity: 100%;
 	cursor: pointer;
 	color: #faea5c;
@@ -486,12 +489,23 @@ h2{
   color: #fff;
   cursor: pointer;
   box-shadow: 0 0 5px #000;
+  position: relative;
+}
+.modal__content-bouton-svg{
+	opacity: 0.5;
+}
+.modal__prev-svg{
+	position: relative;
+	top: 2px;
+	right: 1px;
+}
+.modal__next-svg{
+	position: relative;
+	top: 2px;
+	left: 1px;
 }
 ::backdrop{
 	background: rgba(1, 1, 1, 0.8);
-}
-.modal__icone{
-  pointer-events: none;
 }
 .modal:not([open]) {
   display: none;
