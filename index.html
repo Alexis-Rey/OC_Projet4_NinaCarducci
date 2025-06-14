@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+	<link rel="preload" href="./fonts/inter-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+	<link rel="preload" href="./fonts/spectral-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio de Nina Carducci, photographe professionnelle passionnée par la capture d'émotions et de moments uniques à travers l'image.">
@@ -27,7 +29,7 @@
         </div>
         <div id="js-carousel" class="carousel" role="region" aria-label="Carousel d’images">
             <div class="carousel__gallery">
-                    <img src="./assets/images/slider/ryoji-iwata-desk.webp" class="carousel__image" alt="Première Image du carousel - un homme en costume traverse la rue" aria-hidden="false" aria-current="true"
+                    <img src="./assets/images/slider/ryoji-iwata-desk.webp" class="carousel__image" fetchpriority="high" alt="Première Image du carousel - un homme en costume traverse la rue" aria-hidden="false" aria-current="true"
 					srcset="./assets/images/slider/ryoji-iwata-mob.webp 600w,./assets/images/slider/ryoji-iwata-tab.webp 1200w,./assets/images/slider/ryoji-iwata-desk-mid.webp 1500w,./assets/images/slider/ryoji-iwata-desk.webp 1900w"
 					sizes="(max-width: 600px) 100vw,(max-width: 1200px) 100vw,(max-width: 1500px) 100vw, 100vw">
                     <img src="./assets/images/slider/nicholas-green-desk.webp" class="carousel__image" loading="lazy" alt="Deuxième Image du carousel - une foule en joie à un concert" aria-hidden="true"
