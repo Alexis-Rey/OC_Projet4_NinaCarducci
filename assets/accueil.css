@@ -657,6 +657,9 @@ h2{
 }
 
 @media all and (max-width: 600px){
+	html,body{
+		overflow-x: hidden;
+	}
 	.menu__nav li{
 		padding-inline: 0;
 	}
