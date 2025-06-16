@@ -432,13 +432,19 @@ h2{
 }
 .contact__cards-list{
 	padding: 0;
-}
-.contact__social-list{
 	display: flex;
-	gap: 10%;
+	flex-direction: column;
+	margin-top: 5%;
+}
+.contact__cards-list.social{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.contact__cards-list.social li:first-child{
+	width: 100%;
 	text-align: center;
-	justify-content: center;
-	margin-top: 20%;
+	margin-bottom: 20px;
 }
 .contact__info li{
 	color: var(--background-dark);
