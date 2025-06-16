@@ -82,8 +82,15 @@ h2{
 }
 .carousel__image{
 	flex: 0 0 100%;
+	width: 100vw;
 	height: 100%;
 	object-fit: cover;
+}
+.carousel__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .carousel__bouton-slide{
 	position: absolute;
@@ -168,7 +175,7 @@ h2{
 }
 .about__picture img {
 	width: 100%;
-
+	height: 100%;
 }
 #about-me {
 	flex: 2

@@ -43,15 +43,25 @@
         </div>
         <div id="js-carousel" class="carousel" role="region" aria-label="Carousel d’images">
             <div class="carousel__gallery">
-                    <img src="./assets/images/slider/ryoji-iwata-desk.webp" class="carousel__image" fetchpriority="high" alt="Première Image du carousel - un homme en costume traverse la rue" aria-hidden="false" aria-current="true"
-					srcset="./assets/images/slider/ryoji-iwata-mob.webp 600w,./assets/images/slider/ryoji-iwata-tab.webp 1200w,./assets/images/slider/ryoji-iwata-desk-mid.webp 1500w,./assets/images/slider/ryoji-iwata-desk.webp 1900w"
-					sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px,(max-width: 1500px) 1500px, 100vw">
-                    <img src="./assets/images/slider/nicholas-green-desk.webp" class="carousel__image" loading="lazy" alt="Deuxième Image du carousel - une foule en joie à un concert" aria-hidden="true"
-					srcset="./assets/images/slider/nicholas-green-mob.webp 600w,./assets/images/slider/nicholas-green-tab.webp 1200w,./assets/images/slider/nicholas-green-desk-mid.webp 1500w,./assets/images/slider/nicholas-green-desk.webp 1900w"
-					sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px,(max-width: 1500px) 1500px, 100vw">
-                    <img src="./assets/images/slider/edward-cisneros-desk.webp" class="carousel__image" loading="lazy" alt="Troisème Image du carousel - Célébration de mariage - baiser d'un couple durant la première danse" aria-hidden="true"
-					srcset="./assets/images/slider/edward-cisneros-mob.webp 600w,./assets/images/slider/edward-cisneros-tab.webp 1200w,./assets/images/slider/edward-cisneros-desk-mid.webp 1500w,./assets/images/slider/edward-cisneros-desk.webp 1900w"
-					sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px,(max-width: 1500px) 1500px, 100vw">
+              <picture class="carousel__image">
+                <source media="(max-width: 600px)" srcset="./assets/images/slider/ryoji-iwata-mob.webp" width="600" height="278">
+                <source media="(max-width: 1200px)" srcset="./assets/images/slider/ryoji-iwata-tab.webp" width="1200" height="555">
+                <source media="(max-width: 1500px)" srcset="./assets/images/slider/ryoji-iwata-desk-mid.webp" width="1500" height="693">
+                <img src="./assets/images/slider/ryoji-iwata-desk.webp" alt="Première Image du carousel - un homme en costume traverse la rue" fetchpriority="high" aria-hidden="false" aria-current="true" width="1900" height="879">
+              </picture>
+
+              <picture class="carousel__image">
+                <source media="(max-width: 600px)" srcset="./assets/images/slider/nicholas-green-mob.webp" width="600" height="278">
+                <source media="(max-width: 1200px)" srcset="./assets/images/slider/nicholas-green-tab.webp" width="1200" height="555">
+                <source media="(max-width: 1500px)" srcset="./assets/images/slider/nicholas-green-desk-mid.webp" width="1500" height="694">
+                <img src="./assets/images/slider/nicholas-green-desk.webp" alt="Deuxième Image du carousel - une foule en joie à un concert" loading="lazy" aria-hidden="true" width="1900" height="879">
+              </picture>
+              <picture class="carousel__image">
+                <source media="(max-width: 600px)" srcset="./assets/images/slider/edward-cisneros-mob.webp" width="600" height="278">
+                <source media="(max-width: 1200px)" srcset="./assets/images/slider/edward-cisneros-tab.webp" width="1200" height="555">
+                <source media="(max-width: 1500px)" srcset="./assets/images/slider/edward-cisneros-desk-mid.webp" width="1500" height="693">
+                <img src="./assets/images/slider/edward-cisneros-desk.webp" alt="Troisème Image du carousel - Célébration de mariage - baiser d'un couple durant la première danse" loading="lazy" aria-hidden="true" width="1900" height="878">
+              </picture>
             </div>
             <div class="carousel__bouton-menu">
                 <button type="button" class="carousel__bouton carousel__bouton--actived" aria-current="true" aria-label="Photo 1"></button>
@@ -77,7 +87,7 @@
 <main>
 	<section id="about">
 		<div class="about__picture">
-			<img loading="lazy" src="./assets/images/nina.webp" alt="Photographie de Nina Caruducci">
+			<img loading="lazy" src="./assets/images/nina.webp" alt="Photographie de Nina Caruducci" width="650" height="648">
 		</div>
 		<div id="about-me">
 			<h2 class="about-me__title">A propos de moi</h2>
