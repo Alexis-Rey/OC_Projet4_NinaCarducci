@@ -19,6 +19,9 @@
   --font-main: 'Inter', sans-serif;
   --font-accent: 'Spectral', serif;
 }
+html,body{
+	overflow-x: hidden;
+}
 body{
 	max-width: 1920px;
 	margin: auto;
@@ -169,16 +172,18 @@ h2{
 	z-index: -1;
 }
 .about__picture {
-	flex: 1;
 	margin: 0 20px;
 	z-index: 0;
+	width: 33.5vw;
 }
 .about__picture img {
 	width: 100%;
 	height: 100%;
+	object-fit: cover;
 }
 #about-me {
-	flex: 2
+	flex: 2;
+	width: 100%;
 }
 .about-me__title {
 	margin-top: 1em;
@@ -619,9 +624,6 @@ h2{
 	#about{
 		flex-direction: column;
 	}
-	.about__picture, .contact__picture{
-		width: 75%;
-	}
 	.about__picture::before {
 		width: 100%;
 		height: 40vw;
@@ -728,9 +730,6 @@ h2{
 }
 
 @media all and (max-width: 600px){
-	html,body{
-		overflow-x: hidden;
-	}
 	.menu__nav li{
 		padding-inline: 0;
 	}
