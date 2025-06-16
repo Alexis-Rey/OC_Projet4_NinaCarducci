@@ -337,8 +337,8 @@ h2{
 .contact__picture::before {
 	content: ' ';
 	background-color: var(--primary-color);
-	width: 374px;
-	height: 329px;
+	width: 25%;
+	height: 100%;
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -409,6 +409,54 @@ h2{
 	z-index: 1;
 	top: 1vh;
 	right: 2vw;
+}
+.contact__info{
+	display: flex;
+	gap: 30px;
+	width: 100%;
+	z-index: 1000;
+	position: relative;
+	margin-top: 50px;
+}
+.contact__info a{
+	text-decoration: none;
+}
+.contact__info-cards{
+	background-color: white;
+	padding: 10px;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+}
+.contact__cards-list{
+	padding: 0;
+}
+.contact__social-list{
+	display: flex;
+	gap: 10%;
+	text-align: center;
+	justify-content: center;
+	margin-top: 20%;
+}
+.contact__info li{
+	color: var(--background-dark);
+	list-style-type: none;
+	margin: 3px auto;
+}
+.contact__info h3{
+	color: var(--background-dark);
+	margin: 5px auto 10px;
+	font-size: 16px;
+	font-family: var(--font-main);
+}
+.contact__social-link{
+	display: inline-block;
+	transition: transform 0.5s ease-in-out;
+}
+.contact__social-link:hover{
+	transform: rotateZ(360deg);
 }
 .modal{
   width: 650px;
@@ -651,8 +699,17 @@ h2{
 	}
 	.contact__picture img{
 		top: 0;
+		margin: auto;
+		left: 20%;
+	}
+	.contact__picture::before{
+		width: 20%;
+		height: 70%;
 	}
 	.contact__container{
+		flex-direction: column;
+	}
+	.contact__info{
 		flex-direction: column;
 	}
 }
@@ -691,10 +748,10 @@ h2{
 	.contact__picture img{
 		width: 70vw;
 		top: 0;
-		left: 2vw;
+		left: 5vw;
 	}
 	.contact__picture::before{
-		width: 50vw;
+		width: 50%;
 		height: 50vw;
 	}
 	.contact__container-form h2{
