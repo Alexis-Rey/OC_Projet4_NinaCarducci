@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alexis-rey.github.io/OC_Projet4_NinaCarducci/sitemap-images.xml
