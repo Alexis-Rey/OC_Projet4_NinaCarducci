@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://alexis-rey.github.io/OC_Projet4_NinaCarducci/</loc>
+    <image:image>
+      <image:loc>https://alexis-rey.github.io/OC_Projet4_NinaCarducci/assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-desk.webp</image:loc>
+      <image:caption>Photo du concert d'Aaron Paul</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexis-rey.github.io/OC_Projet4_NinaCarducci/assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-desk.webp</image:loc>
+      <image:caption>Photo d'un homme en costume</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexis-rey.github.io/OC_Projet4_NinaCarducci/assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-desk.webp</image:loc>
+      <image:caption>Photo d'une femme souriante dans son entreprise</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexis-rey.github.io/OC_Projet4_NinaCarducci/assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-desk.webp</image:loc>
+      <image:caption>Photo d'un mariage : deux mariées face à face se tiennent les mains</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexis-rey.github.io/OC_Projet4_NinaCarducci/assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-desk.webp</image:loc>
+      <image:caption>Photo portrait d'un homme au soleil</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexis-rey.github.io/OC_Projet4_NinaCarducci/assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-desk.webp</image:loc>
+      <image:caption>Photo d'un mariage: le couple heureux se regarde avec complicité</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexis-rey.github.io/OC_Projet4_NinaCarducci/assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-desk.webp</image:loc>
+      <image:caption>Photo portrait en contre-plongée d'une jeune femme</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexis-rey.github.io/OC_Projet4_NinaCarducci/assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-desk.webp</image:loc>
+      <image:caption>Photo du concert d'Austin Neill</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://alexis-rey.github.io/OC_Projet4_NinaCarducci/assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-desk.webp</image:loc>
+      <image:caption>Photo d'une femme qui partage un moment amusant en entreprise</image:caption>
+    </image:image>
+  </url>
+</urlset>
