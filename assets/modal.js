@@ -7,17 +7,19 @@ let currentImages = [];
 export function openModal(imagesFromGallery){
     currentImages = imagesFromGallery;
     for(let i=0;i<imagesFromGallery.length;i++){
+        const picture = imagesFromGallery[i];
+        const img = picture.querySelector("img");
         imagesFromGallery[i].addEventListener("click", () =>{
             modal.showModal();
             closeButton.focus();
-            showImage(imagesFromGallery[i]);
+            showImage(img);
         });
         imagesFromGallery[i].addEventListener("keydown", (e) =>{
             if(e.key === 'Enter' || e.key === ' '){
                 e.preventDefault();
                 modal.showModal();
                 closeButton.focus();
-                showImage(imagesFromGallery[i]);  
+                showImage(img);  
             }; 
         });
     };
@@ -45,16 +47,19 @@ function showImage(captureImage) {
 
 function navImage(direction,imagesFromGallery){
     let nextIndex;
-    let currentIndex = Array.from(imagesFromGallery).findIndex(img => img.src === waitingImage.src)
-    if(direction === "gauche"){
-        nextIndex = (currentIndex - 1 + imagesFromGallery.length) % imagesFromGallery.length;       
-    }else if(direction === "droite"){
+    let currentIndex = imagesFromGallery.findIndex(picture => {
+        const img = picture.querySelector("img");
+        return img && img.src === waitingImage.src;
+    });
+    if (direction === "gauche") {
+        nextIndex = (currentIndex - 1 + imagesFromGallery.length) % imagesFromGallery.length;
+    } else if (direction === "droite") {
         nextIndex = (currentIndex + 1) % imagesFromGallery.length;
-    };
-    waitingImage.src = imagesFromGallery[nextIndex].src;
-    waitingImage.alt = imagesFromGallery[nextIndex].alt
+    }
+    const nextImg = imagesFromGallery[nextIndex].querySelector("img");
+    waitingImage.src = nextImg.src;
+    waitingImage.alt = nextImg.alt;
     resizeModal(waitingImage);
-    
 };
 
 function resizeModal(waitingImage){

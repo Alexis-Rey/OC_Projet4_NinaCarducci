@@ -111,15 +111,42 @@
 				<button data-menu-tag="Portrait" class="gallery__menu-options" aria-current="false">Portrait</button>
 		</div>
 		<div class="gallery__grid">
-			<img id="gallery__image-1" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Concert" class="gallery__image" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-desk.webp" alt="Photo du concert d'Aaron Paul" tabindex="0" width="600" height="800">
-			<img id="gallery__image-2" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Entreprises" class="gallery__image" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-desk.webp" alt="Photo d'un homme en costume" tabindex="0" width="550" height="825">
-			<img id="gallery__image-3" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Entreprises" class="gallery__image" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-desk.webp" alt="Photo d'une femme souriante dans son entreprise" tabindex="0" width="650" height="440">
-			<img id="gallery__image-4" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Mariages" class="gallery__image" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-desk.webp" alt="Photo d'un mariage : deux mariées face à face se tiennent les mains" tabindex="0" width="650" height="520">
-			<img id="gallery__image-5" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Portrait" class="gallery__image" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-desk.webp" alt="Photo portrait d'un homme au soleil" tabindex="0" width="550" height="824">
-			<img id="gallery__image-6" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Mariages" class="gallery__image" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-desk.webp" alt="Photo d'un mariage: le couple heureux se regarde avec complicité" tabindex="0" width="550" height="825">
-			<img id="gallery__image-7" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Portrait" class="gallery__image" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-desk.webp" alt="Photo portrait en contre-plongée d'une jeune femme " tabindex="0" width="550" height="827">
-			<img id="gallery__image-8" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Concert" class="gallery__image" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-desk.webp" alt="Photo du concert d'Austin Neill" tabindex="0" width="650" height="433">
-			<img id="gallery__image-9" role="button" aria-label="Ouvrir en grand" loading="lazy" data-gallery-tag="Entreprises" class="gallery__image" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-desk.webp" alt="Photo d'une femme qui partage un moment amusant en entreprise" tabindex="0" width="650" height="398">
+			<picture class="gallery__image" role="button" aria-label="Ouvrir en grand" tabindex="0" data-gallery-tag="Concert">
+        <source media="(max-width: 600px)" srcset="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-desk-mid.webp" width="450" height="600">
+        <img src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-desk.webp" alt="Photo du concert d'Aaron Paul" loading="lazy" width="600" height="800">
+      </picture>
+      <picture class="gallery__image" role="button" aria-label="Ouvrir en grand" tabindex="0" data-gallery-tag="Entreprises">
+        <source media="(max-width: 600px)" srcset="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-desk-mid.webp" width="400" height="600">
+        <img src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-desk.webp" alt="Photo d'un homme en costume" loading="lazy" width="550" height="825">
+      </picture>
+      <picture class="gallery__image" role="button" aria-label="Ouvrir en grand" tabindex="0" data-gallery-tag="Entreprises">
+        <source media="(max-width: 600px)" srcset="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-desk-mid.webp" width="500" height="338">
+        <img src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-desk.webp" alt="Photo d'une femme souriante dans son entreprise" loading="lazy" width="650" height="440">
+      </picture>
+      <picture class="gallery__image" role="button" aria-label="Ouvrir en grand" tabindex="0" data-gallery-tag="Mariages">
+        <source media="(max-width: 600px)" srcset="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-desk-mid.webp" width="500" height="400">
+        <img src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-desk.webp" alt="Photo d'un mariage : deux mariées face à face se tiennent les mains" loading="lazy" width="650" height="520">
+      </picture>
+      <picture class="gallery__image" role="button" aria-label="Ouvrir en grand" tabindex="0" data-gallery-tag="Portrait">
+        <source media="(max-width: 600px)" srcset="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-desk-mid.webp" width="400" height="600">
+        <img src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-desk.webp" alt="Photo portrait d'un homme au soleil" loading="lazy" width="550" height="824">
+      </picture>
+			<picture class="gallery__image" role="button" aria-label="Ouvrir en grand" tabindex="0" data-gallery-tag="Mariages">
+        <source media="(max-width: 600px)" srcset="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-desk-mid.webp" width="400" height="600">
+        <img src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-desk.webp" alt="Photo d'un mariage: le couple heureux se regarde avec complicité" loading="lazy" width="550" height="825">
+      </picture>
+      <picture class="gallery__image" role="button" aria-label="Ouvrir en grand" tabindex="0" data-gallery-tag="Portrait">
+        <source media="(max-width: 600px)" srcset="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-desk-mid.webp" width="400" height="601">
+        <img src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-desk.webp" alt="Photo portrait en contre-plongée d'une jeune femme" loading="lazy" width="550" height="827">
+      </picture>
+			<picture class="gallery__image" role="button" aria-label="Ouvrir en grand" tabindex="0" data-gallery-tag="Concert">
+        <source media="(max-width: 600px)" srcset="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-desk-mid.webp" width="540" height="360">
+        <img src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-desk.webp" alt="Photo du concert d'Austin Neill" loading="lazy" width="650" height="433">
+      </picture>
+      <picture class="gallery__image" role="button" aria-label="Ouvrir en grand" tabindex="0" data-gallery-tag="Entreprises">
+        <source media="(max-width: 600px)" srcset="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-desk-mid.webp" width="500" height="306">
+        <img src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-desk.webp" alt="Photo d'une femme qui partage un moment amusant en entreprise" loading="lazy" width="650" height="398">
+      </picture>
 		</div>
 		<blockquote class="quote">
 			<p class="quote__text">Un portrait n’est pas une ressemblance.<br> Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.</p>
