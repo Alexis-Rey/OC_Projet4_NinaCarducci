@@ -90,9 +90,10 @@
 <main>
 	<section id="about">
 		<div class="about__picture">
-			<img src="./assets/images/nina-tab.webp" alt="Photographie de Nina Caruducci" width="480" height="479"
-      srcset="./assets/images/nina-mob.webp 320w,./assets/images/nina-tab.webp 480w"
-      sizes="(max-width: 400px) 320px, 480px">
+      <picture>
+        <source media="(max-width: 400px)" srcset="./assets/images/nina-mob.webp" width="320" height="319">
+        <img src="./assets/images/nina-tab.webp" alt="Photographie de Nina Caruducci" width="480" height="479">
+      </picture>
 		</div>
 		<div id="about-me">
 			<h2 class="about-me__title">A propos de moi</h2>

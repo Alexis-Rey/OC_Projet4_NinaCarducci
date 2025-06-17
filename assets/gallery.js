@@ -36,7 +36,6 @@ function filtreImages(categoriesBouton){
             container.appendChild(images[i]);
         };
         openModal(images);
-        console.log(images);
     }else{
         for( let i=0; i<imagesFiltered.length;i++){
             container.appendChild(imagesFiltered[i]);
